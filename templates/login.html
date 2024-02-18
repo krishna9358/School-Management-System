@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block body %}
+	<div class="container" style="margin-top: 100pt">
+		<h1 align="center" style="font-size: 320%">School Management System</h1>
+		<div class="form" style="text-align: center;">
+			<form action="/login" method="post" onsubmit="Submit(); return false ;">
+				<label style="font-size: x-large;">Username : </label>
+				<input type="text" id="name" name="name" style="border: none; border-bottom: 1px solid black ; font-size: large; margin-bottom: 10px;" placeholder="Enter Username">  <br>
+				<label style="font-size: x-large;">Password : </label>
+				<input type="Password" name="pass" style="border: none; border-bottom: 1px solid black; margin-top: 10px; font-size: large;" id="pass" placeholder="Enter Password"> <br>
+				<input type="submit" name="submit" style="margin-top: 20px; font-size: large;">
+				<a href="/forgotPass" style="margin-left: 08vw; text-decoration: none;">Forgotten Password</a> <br>
+				<p style="text-align:center;margin-bottom: 0px;" id="error_msg"></p><br clear="all">
+				<hr style="width: 40vw; margin-top:0px;">
+
+				<p> DON'T HAVE AN ACCOUNT </p><br>
+				Click on the button right away >> <a href="/signup"> SIGN UP</a>
+
+
+			</form>
+		</div>
+
+		<footer align="center" style="margin-top: 100pt;">
+			<hr>
+			Copyright &copy 2020 | Saraswati Vidya Mandir
+		</footer>
+	</div>
+	<script type="text/javascript">
+		function Submit(){
+			let username = document.querySelector('#name').value;
+			let password = document.querySelector("#pass").value;
+			 if (username === ''){
+			 	document.querySelector('#error_msg').style.color = "red" ;
+				document.querySelector("#error_msg").innerHTML = "Please ! Enter the username" ;
+				}
+			else if (password === ''){
+				document.querySelector('#error_msg').style.color = "red" ;
+				document.querySelector("#error_msg").innerHTML = "Please ! Enter the password";
+
+			}
+			else {
+				document.querySelector("#error_msg").innerHTML = "OK!";
+				document.querySelector('#error_msg').style.color = "green" ;
+			}
+			
+		}
+	</script>
+
+{% endblock %}

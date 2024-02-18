@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<form action="" method="POST" style="border: 2px solid #FF9900;">
+	<h1 style="font-family: arial; background-color: #FF9900; margin-top: 0px; text-align: center; padding: 10px;">Forgotten Password</h1>
+	<label style="font-size: 2vw; padding: 50px; ">Enter the Registered Username/Email/Phone Number : </label>
+	<input type="text" name="username" style="font-size: 2vw; margin-top: 02%;" placeholder="Enter Username "> <br>
+	<input type="submit" name="submit" style="margin-left: 50%; margin-top: 3%; padding: 50px; padding: 10px; font-size: 2vw;">		<br clear="all"><br>
+	<hr>
+
+	<p align="center" style="font-size: 1.5vw">Want to login >> <a href="/login">Login</a>
+	| Or | want to sign up >> <a href="/signup">Signup</a></p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block style %}
+
+.container {margin-top: 100pt;background-color: red;}
+.main_logo{margin-top: 100pt;}
+.form {margin-top: 100pt; background-color: red;}
+
+
+
+{% endblock %}
